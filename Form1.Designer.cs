@@ -35,11 +35,9 @@
             btnSave = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
-            pictureBox2 = new PictureBox();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)image1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -105,23 +103,14 @@
             label1.Size = new Size(0, 15);
             label1.TabIndex = 6;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(12, 303);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(209, 151);
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
-            // 
             // button3
             // 
-            button3.Location = new Point(239, 303);
+            button3.Location = new Point(12, 292);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 8;
             button3.Text = "blurButton";
             button3.UseVisualStyleBackColor = true;
-            //button3.Click += button3_Click;
             // 
             // Form1
             // 
@@ -129,7 +118,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(633, 466);
             Controls.Add(button3);
-            Controls.Add(pictureBox2);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(btnSave);
@@ -142,7 +130,6 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)image1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,7 +143,6 @@
         private Button btnSave;
         private TextBox textBox1;
         private Label label1;
-        private PictureBox pictureBox2;
         private Button button3;
     }
 }
