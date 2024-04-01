@@ -35,7 +35,7 @@
             btnSave = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
-            button3 = new Button();
+            btnBlur = new Button();
             ((System.ComponentModel.ISupportInitialize)image1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -63,9 +63,9 @@
             // 
             button2.Location = new Point(331, 239);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(128, 23);
             button2.TabIndex = 2;
-            button2.Text = "Filter";
+            button2.Text = "Edge detection Filter";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -103,21 +103,22 @@
             label1.Size = new Size(0, 15);
             label1.TabIndex = 6;
             // 
-            // button3
+            // btnBlur
             // 
-            button3.Location = new Point(12, 292);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 8;
-            button3.Text = "blurButton";
-            button3.UseVisualStyleBackColor = true;
+            btnBlur.Location = new Point(12, 281);
+            btnBlur.Name = "btnBlur";
+            btnBlur.Size = new Size(75, 23);
+            btnBlur.TabIndex = 7;
+            btnBlur.Text = "Blur filter";
+            btnBlur.UseVisualStyleBackColor = true;
+            btnBlur.Click += btnBlur_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(633, 466);
-            Controls.Add(button3);
+            Controls.Add(btnBlur);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(btnSave);
@@ -143,6 +144,6 @@
         private Button btnSave;
         private TextBox textBox1;
         private Label label1;
-        private Button button3;
+        private Button btnBlur;
     }
 }

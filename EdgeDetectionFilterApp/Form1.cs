@@ -120,7 +120,35 @@ namespace EdgeDetectionFilterApp
             {
                 MessageBox.Show("No image loaded in PictureBox!");
             }
-        }       
+        }
+
+        private void btnBlur_Click(object sender, EventArgs e)
+        {
+            var temp = (Bitmap)image1.Image;
+            Bitmap newBitmap = (Bitmap)temp.Clone();
+            for (int x = 1; x < newBitmap.Width; x++)
+            {
+                for (int y = 1; y < newBitmap.Height; y++)
+                {
+                    try
+                    {
+                        Color prevX = newBitmap.GetPixel(x - 1, y);
+                        Color nextX = newBitmap.GetPixel(x + 1, y);
+                        Color prevY = newBitmap.GetPixel(x - 1, y - 1);
+                        Color nextY = newBitmap.GetPixel(x - 1, y + 1);
+
+                        int avgR = (int)((prevX.R + nextX.R + prevY.R + nextY.R) / 4);
+                        int avgG = (int)((prevX.G + nextX.G + prevY.G + nextY.G) / 4);
+                        int avgB = (int)((prevX.B + nextX.B + prevY.B + nextY.B) / 4);
+
+                        newBitmap.SetPixel(x, y, Color.FromArgb(avgR, avgG, avgB));
+                    }
+                    catch (Exception) { }
+
+                }
+            }
+            image1.Image = newBitmap;
+        }
     }
 
 }
